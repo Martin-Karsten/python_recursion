@@ -1,4 +1,3 @@
-from math import factorial
 from factorial import Factorial
 
 def test_factorial():
