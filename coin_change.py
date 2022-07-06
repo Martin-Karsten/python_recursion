@@ -21,10 +21,10 @@ class Solution:
               # check how many coins it takes for 1,2,3 to reach 2 or less  -> how many coins it takes for 1,2,3 to reach 1 or less   -> how many coins it takes for 1,2,3 to reach 0 or less
               # check how many coins it takes for 1,2,3 to reach 3 or less  -> for 1,2,3 to reach 2 or less   -> for 1,2,3 to reach 1 or less -> for 1,2,3 to reach 0 or less
               # check how many coins it takes for 1,2,3 to reach 4 or less  -> for 1,2,3 to reach 3 or less   -> for 1,2,3 to reach 2 or less -> for 1,2,3 to reach 1 or less -> for 1,2,3 to reach 0 or less
-            # evyertime we end a dfs() cycle we add + 1 because it represents the current coin. 1 + dfs() -> 1 + everything that came before
+            # every time we end a dfs() cycle we add + 1 because it represents the current coin. 1 + dfs() -> 1 + everything that came before
             # for steps we already visited we use memo
             # in every dfs call minCoins is reset to float('inf')
-                # that way on every for loop (in a dfs() cyble) we can decide which coin combination was of [1,2,3] took the least to reach the amount in the current dfs() cycle
+                # that way on every for loop (in a dfs() cycle) we can decide which coin combination was of [1,2,3] took the least to reach the amount in the current dfs() cycle
             minCoins = float('inf')
             for coin in coins:
                 numCoins = 1 +dfs(coins, amount - coin)
